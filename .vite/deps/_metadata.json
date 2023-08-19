@@ -1,0 +1,29 @@
+{
+  "hash": "6214c7f8",
+  "browserHash": "a2739980",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/.deno/react@18.2.0/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "a89198d6",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/.deno/react@18.2.0/node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "19363b66",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/.deno/react-dom@18.2.0/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "f634c4b1",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-VWS3KKRP": {
+      "file": "chunk-VWS3KKRP.js"
+    }
+  }
+}

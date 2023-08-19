@@ -1,0 +1,48 @@
+.heart {
+  background-color: rgb(238, 238, 238);
+  border-radius: 20px;
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  gap:1em;
+}
+
+.text{
+  letter-spacing: 4px;
+}
+
+svg {
+  width: 0;
+  height: 0;
+}
+
+.color-changing-square {
+  width: 2em;
+  height: 2em;
+  background-color: rgb(185, 185, 185);
+  position: relative;
+  /* 相対位置指定 */
+  overflow: hidden;
+  /* 内容がはみ出さないように */
+  transition: background-color 0.3s;
+  clip-path: url(#path--heart);
+  user-select: none;
+}
+
+.color-changing-square::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #e74c3c;
+  /* 変更後の色 */
+  transition: height 0.3s ease-in-out;
+}
+
+.color-changing-square.clicked::before {
+  height: 100%;
+  /* 下から上へのアニメーション */
+  /* background-color: #3498db;  */
+}

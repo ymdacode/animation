@@ -6,5 +6,10 @@ import 'npm:react-dom@^18.2.0/client'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()]
+  plugins: [react()],
+  server: {
+    watch: {
+      usePolling: true
+    }
+  }
 })
