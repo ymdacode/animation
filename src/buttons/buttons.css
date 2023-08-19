@@ -1,19 +1,27 @@
+.wrapper {
+  display: flex;
+  gap: 3em;
+  list-style: none;
+}
+
+svg {
+  width: 0;
+  height: 0;
+}
+
+
 .heart {
   background-color: rgb(238, 238, 238);
   border-radius: 20px;
   padding: 0.5em 1em;
   display: flex;
   align-items: center;
-  gap:1em;
+  gap: 1em;
+  user-select: none;
 }
 
-.text{
+.text {
   letter-spacing: 4px;
-}
-
-svg {
-  width: 0;
-  height: 0;
 }
 
 .color-changing-square {
@@ -26,7 +34,6 @@ svg {
   /* 内容がはみ出さないように */
   transition: background-color 0.3s;
   clip-path: url(#path--heart);
-  user-select: none;
 }
 
 .color-changing-square::before {
@@ -45,4 +52,43 @@ svg {
   height: 100%;
   /* 下から上へのアニメーション */
   /* background-color: #3498db;  */
+}
+
+/* shake */
+.shaking-button {
+  padding: 0.5em 3em;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  user-select: none;
+}
+
+.shake {
+  animation: shake 1.5s;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateY(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateY(10px);
+  }
 }

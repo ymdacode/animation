@@ -1,10 +1,12 @@
 import  './App.css'
-import Heart from './buttons/Heart'
+import Buttons from './buttons/ButtonsWrapper'
 
 function App() {
 
   return (
-        <Heart />
+
+    <Buttons />
+
   )
 
 }
