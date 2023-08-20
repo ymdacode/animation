@@ -1,0 +1,37 @@
+/* shake */
+.shakingButton {
+  padding: 0.5em 3em;
+  background-color: #53bb87;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.text{
+  letter-spacing: 2px;
+}
+
+.shake {
+  animation: shake 1.5s;
+}
+
+@keyframes shake {
+
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateY(-15px);
+  }
+}

@@ -1,18 +1,17 @@
-import "./buttons.css"
+import Style from "./Heart.module.css"
 import React, { useState } from 'react';
 
 function Heart() {
-  const [click, setClick] = useState('');
+  const [click, setClick] = useState(false);
   const handleClick = () => {
-    const isClicked = click === 'clicked' ? '' : 'clicked';
-    setClick(isClicked);
+    click ? setClick(false) : setClick(true) 
   };
 
   return (
     <>
-      <button className="heart" onClick={handleClick}>
+      <button className={Style.heart} onClick={handleClick}>
         <div
-          className={`color-changing-square ${click}`}
+          className={`${Style.colorChangingSquare} ${click ? '' : Style.clicked}`}
           id="square">
         </div>
         <svg
@@ -24,7 +23,7 @@ function Heart() {
             </clipPath>
           </defs>
         </svg>
-        <p className="text">Like</p>
+        <p className={Style.text}>Like</p>
       </button>
     </>
   )
