@@ -1,0 +1,46 @@
+.hamburgerIcon {
+  --lineWidth: 15px;
+  --lineHeight: 15px;
+  --lineWeight: 2px;
+  --lineColor:#f0f0f0;
+}
+
+.hamburgerIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var(--lineWidth);
+  height: var(--lineHeight);
+}
+
+.line {
+  width: 100%;
+  height: var(--lineWeight);
+  background-color: var(--lineColor);
+  margin: var(--lineWeight) 0;
+  transition: all 0.5s ease;
+}
+
+.open {
+  transform: rotate(45deg);
+}
+
+.open .line:nth-child(1) {
+  transform: translateY(
+    calc(
+      (var(--lineHeight) - (var(--lineWeight) * 2)) / 2 - var(--lineWeight) / 2
+      )
+    );
+}
+
+.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.open .line:nth-child(3) {
+  transform: rotate(-90deg) translateX(
+    calc(
+      (var(--lineHeight) - (var(--lineWeight) * 2)) / 2 - var(--lineWeight) / 2
+      )
+    );
+}

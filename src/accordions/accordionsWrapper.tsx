@@ -1,5 +1,7 @@
 import './accordions.css';
 import SlideDown from './SlideDown';
+import SlideDown2 from './SlideDown2';
+
 
 function Accordions() {
 
@@ -8,6 +10,11 @@ function Accordions() {
       <h2>Accordions</h2>
       <ul className="wrapper">
         <SlideDown />
+        <SlideDown2 />
+        <SlideDown />
+        <SlideDown2 />
+        <SlideDown />
+        <SlideDown2 />
       </ul>
     </>
 

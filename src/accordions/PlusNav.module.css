@@ -1,0 +1,38 @@
+.plusIcon {
+  --lineWidth: 15px;
+  --lineHeight: 15px;
+  --lineWeight: 1px;
+  --lineColor:#f0f0f0;
+}
+
+.plusIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: var(--lineWidth);
+  height: var(--lineHeight);
+}
+
+.line {
+  width: 100%;
+  height: var(--lineWeight);
+  background-color: var(--lineColor);
+  margin: var(--lineWeight) 0;
+  transition: all 0.8s;
+}
+
+.line:nth-child(1){
+  transform: translateY(calc(var(--lineWeight) * 1.5))
+}
+
+.line:nth-child(2){
+  transform: rotate(90deg) translateX(calc(var(--lineWeight) * -1))
+}
+
+.open .line:nth-child(1) {
+  opacity: 0;
+}
+
+.open .line:nth-child(2) {
+  transform: rotate(0deg) translateY(calc(var(--lineWeight) * -1.5 ))
+}

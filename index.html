@@ -10,41 +10,43 @@
 
 <body>
   <div class="cursor"></div>
+  <div class="cursor cursor2"></div>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 
 <style>
-
   body {
     position: relative;
-    overflow: hidden;
   }
 
   .cursor {
+    width: 16px;
+    height: 16px;
+    background-color: #3c69bd;
+    opacity: 0.6;
+    z-index: 1001;
     border-radius: 50%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -8px;
+    left: -8px;
+    transform: translate(0, 0);
+    pointer-events: none;
   }
 
-  .cursor {
-    width: 8px;
-    height: 8px;
-    background-color: #000;
-    z-index: 1001;
+  .cursor2 {
+    transition: transform 0.5s ease-out;
+    opacity: 0.3;
   }
-
 </style>
 <script>
-  const cursor = document.getElementsByClassName("cursor")[0];
-  document.addEventListener('mousemove', (event) => {
-    const x = event.clientX; // マウスのX座標
-    const y = event.clientY; // マウスのY座標
-    cursor.style.top = `${y}px`;
-    cursor.style.left = `${x}px`;
-    console.log(`${x}&&&${y}`)
+  const cursor = document.getElementsByClassName("cursor");
+  document.addEventListener('mousemove', (e) => {
+      for (let elem of cursor) {
+        elem.style.transform = `translate(${window.scrollX + e.clientX}px, ${window.scrollY + e.clientY}px)`;
+      }
   });
+
 </script>
 
 </html>

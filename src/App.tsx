@@ -1,6 +1,7 @@
 import './App.css'
 import Buttons from './buttons/ButtonsWrapper'
 import Accordions from './accordions/accordionsWrapper'
+import Links from './links/Links'
 import Header from './Header'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Buttons />
       <Accordions />
+      <Links />
     </>
   )
 
