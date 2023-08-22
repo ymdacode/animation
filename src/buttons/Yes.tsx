@@ -23,7 +23,9 @@ function Yes() {
   return (
     <>
       <button className={`${Style.shakingButton} ${shaking ? Style.shake : ''}`} onClick={handleClick}>
-        <p className={Style.text}>Yes</p>
+        <p className={Style.text}>
+          Yes
+        </p>
       </button>
     </>
   )

@@ -1,6 +1,7 @@
 import Heart from './Heart'
 import Yes from './Yes'
 import Good from './Good'
+import Ok from './OK'
 import './buttons.css'
 
 function Buttons() {
@@ -12,6 +13,15 @@ function Buttons() {
         <li><Heart /></li>
         <li><Yes /></li>
         <li><Good /></li>
+        <li><Ok /></li>
+        <li><Heart /></li>
+        <li><Yes /></li>
+        <li><Good /></li>
+        <li><Ok /></li>
+        <li><Heart /></li>
+        <li><Yes /></li>
+        <li><Good /></li>
+        <li><Ok /></li>
       </ul>
     </>
 

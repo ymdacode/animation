@@ -9,8 +9,42 @@
 </head>
 
 <body>
+  <div class="cursor"></div>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
+
+<style>
+
+  body {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cursor {
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .cursor {
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    z-index: 1001;
+  }
+
+</style>
+<script>
+  const cursor = document.getElementsByClassName("cursor")[0];
+  document.addEventListener('mousemove', (event) => {
+    const x = event.clientX; // マウスのX座標
+    const y = event.clientY; // マウスのY座標
+    cursor.style.top = `${y}px`;
+    cursor.style.left = `${x}px`;
+    console.log(`${x}&&&${y}`)
+  });
+</script>
 
 </html>

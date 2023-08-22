@@ -11,7 +11,7 @@ function Heart() {
     <>
       <button className={Style.heart} onClick={handleClick}>
         <div
-          className={`${Style.colorChangingSquare} ${click ? '' : Style.clicked}`}
+          className={`${Style.colorChangingSquare} ${click ? Style.clicked : ''}`}
           id="square">
         </div>
         <svg
